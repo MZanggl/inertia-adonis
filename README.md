@@ -1,3 +1,7 @@
+## [What is inertia](https://reinink.ca/articles/introducing-inertia-js)
+
+> **Note:** The whole inertia project is in the very early stages of development and IS NOT yet intended for public consumption.
+
 # Inertia Adonis Adapter
 
 Create server-driven single page applications. No client routing, no store.
@@ -32,7 +36,7 @@ The first step to using Inertia is creating a root template. We recommend using 
 <div id="app" data-page="{{ pageString }}"></div>
 ```
 
-If you'd like to use a different id for the root view, you can change it using
+You can change the id while still making use of the `startTag` tag by using 
 
 ```javascript
 Inertia.setRootView('name')
@@ -140,3 +144,7 @@ hooks.after.providersBooted(async () => {
     Inertia.setVersion(version)
 })
 ```
+
+# TODO
+- Avoid third parameter in `inertia.render` method
+- Refactor stautus change from 302 -> 303
