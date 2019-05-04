@@ -1,0 +1,17 @@
+{
+  "name": "inertia-adonis",
+  "version": "0.1.0",
+  "description": "Inertia Adonis adapter to create server-driven single page applications",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Zanggl",
+  "license": "MIT",
+  "dependencies": {
+    "he": "^1.2.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@adonisjs/fold": "^4.0.9"
+  }
+}
