@@ -69,9 +69,7 @@ class Inertia {
         return view.render(rootView, {
             page,
             pageString,
-            startTag: `<div id="${rootView}" data-page="${he.escape(
-                pageString
-            )}"></div>`,
+            startTag: `<div id="${rootView}" data-page="${he.escape(pageString)}"></div>`,
             ...edgeParameters
         })
     }

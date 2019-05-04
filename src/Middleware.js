@@ -7,19 +7,14 @@ class Middleware {
         Inertia.bind(context)
         await next()
 
-        if (
-            context.inertia.isAjaxRequest() &&
-            context.inertia.hasVersionChanged()
-        ) {
-            context.inertia.forceReload()
+        const { inertia, request, response } = context
+        if (inertia.isAjaxRequest() && inertia.hasVersionChanged()) {
+            inertia.forceReload()
         }
 
         // turn 302 redirects into GET, so inertia can handle it correctly
-        if (
-            ['PUT', 'PATCH', 'DELETE'].includes(context.request.method()) &&
-            is302Redirect(context.response)
-        ) {
-            redirectUsing303(context.response)
+        if (['PUT', 'PATCH', 'DELETE'].includes(request.method()) && is302Redirect(response)) {
+            redirectUsing303(response)
         }
     }
 }
